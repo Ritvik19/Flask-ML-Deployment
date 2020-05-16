@@ -18,5 +18,16 @@ def predict():
 
     return render_template('index.html', inp=inp, prediction_text=prediction)
 
+@app.route('/file')
+def file():
+    return render_template('file.html')
+
+@app.route('/upload', methods = ['POST'])
+def upload():
+    f = request.files['file']  
+    f.save(f.filename)
+    
+    return render_template("file.html", prediction_text=f.filename) 
+
 if __name__ == "__main__":
     app.run(debug=True)
