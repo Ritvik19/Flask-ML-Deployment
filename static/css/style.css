@@ -7,7 +7,6 @@
 
 body {
     background-image: linear-gradient(to bottom right, var(--c4), var(--c4), var(--c3), var(--c2));
-    /* background-color: var(--c4); */
     color: var(--c2);
 }
 
